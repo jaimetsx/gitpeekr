@@ -39,7 +39,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <span className="page-footer">Built with the GitHub REST API</span>
+      <span className="page-footer">Built with Next.js & the GitHub API</span>
     </main>
   );
 }

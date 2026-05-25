@@ -14,19 +14,24 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "GitPeekr — GitHub Profile Viewer",
-  description: "Instantly look up any public GitHub profile and explore their top repositories.",
+  description:
+    "Instantly look up any public GitHub profile and explore their top repositories.",
   openGraph: {
     title: "GitPeekr — GitHub Profile Viewer",
-    description: "Instantly look up any public GitHub profile and explore their top repositories.",
+    description:
+      "Instantly look up any public GitHub profile and explore their top repositories.",
     type: "website",
+  },
+  icons: {
+    icon: "/favicon.svg",
   },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>

@@ -53,22 +53,7 @@ html {
     background-position: 0 0, 0 0, 50% 0, 0 0;
   }
   to {
-    background-position: 28px 28px, 28px 28px, 50% 0, 0 0;
-  }
-}
-
-@keyframes glowFloat {
-  0% {
-    transform: translate3d(0, 0, 0) scale(1);
-    opacity: 0.9;
-  }
-  50% {
-    transform: translate3d(0, 18px, 0) scale(1.03);
-    opacity: 1;
-  }
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-    opacity: 0.9;
+    background-position: 18px 10px, 10px 18px, 50% 8%, 0 0;
   }
 }
 
@@ -79,22 +64,23 @@ body {
   background:
     linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px),
-    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.04), transparent 34%),
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.025), transparent 32%),
     linear-gradient(to bottom, #0d0d0e, #0a0a0b);
   background-size: 28px 28px, 28px 28px, 100% 100%, 100% 100%;
-  animation: gridDrift 40s linear infinite;
+  animation: gridDrift 32s linear infinite;
 }
 
 body::before {
   content: "";
   position: fixed;
-  inset: -10%;
+  inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.035), transparent 18%),
-    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.02), transparent 16%);
-  filter: blur(20px);
-  animation: glowFloat 10s ease-in-out infinite;
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 112px 112px;
+  mask-image: radial-gradient(circle at center, black 26%, transparent 78%);
+  opacity: 0.22;
 }
 
 ::selection {

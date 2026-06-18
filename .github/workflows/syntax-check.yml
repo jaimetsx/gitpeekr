@@ -27,17 +27,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: 'lts/*'
-          cache: 'pnpm'
-
       - name: Install pnpm
         uses: pnpm/action-setup@v6
         with:
           version: 10
           run_install: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 'lts/*'
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -46,7 +46,7 @@ jobs:
         run: pnpm exec tsc --noEmit
 
       - name: Install Stylelint
-        run: pnpm add -D stylelint stylelint-config-standard
+        run: pnpm add -D stylelint
 
       - name: Check CSS syntax
         run: pnpm exec stylelint "**/*.css" --allow-empty-input

@@ -12,7 +12,7 @@
     "@primer/octicons-react": "^19.29.2",
     "next": "16.2.6",
     "ogl": "^1.0.11",
-    "react": "19.2.4",
+    "react": "19.2.7",
     "react-dom": "19.2.4",
     "react-github-calendar": "^5.0.6"
   },

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@primer/octicons-react": "^19.29.2",
-    "next": "16.2.10",
+    "next": "16.2.11",
     "ogl": "^1.0.11",
     "react": "19.2.8",
     "react-dom": "19.2.7",

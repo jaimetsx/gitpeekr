@@ -31,13 +31,13 @@ export async function GET(
     ]);
 
     if (userRes.status === 404) {
-      return NextResponse.json({ error: "Usuario no encontrado" }, { status: 404 });
+      return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
     if (userRes.status === 403) {
-      return NextResponse.json({ error: "Rate limit de GitHub alcanzado, inténtalo en unos minutos" }, { status: 403 });
+      return NextResponse.json({ error: "GitHub rate limit exceeded, try again later" }, { status: 403 });
     }
     if (!userRes.ok) {
-      return NextResponse.json({ error: "Error consultando GitHub" }, { status: 500 });
+      return NextResponse.json({ error: "Error consulting GitHub" }, { status: 500 });
     }
 
     const user = await userRes.json();

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Snake from "@/components/Snake";
 import ProfileCard from "@/components/ProfileCard";
 import RepoCard from "@/components/RepoCard";
 import SearchBar from "@/components/SearchBar";
@@ -41,6 +42,16 @@ export default async function UserPage({
   if (data.error) {
     return (
       <main className="user-page">
+        <div className="snake-bg">
+          <Snake
+            snakeColor="#FFFFFF"
+            foodColor="#F9731A"
+            boardColor="rgba(255, 255, 255, 0.04)"
+            cellSize={34}
+            speed={10}
+            fade={32}
+          />
+        </div>
         <div
           style={{
             minHeight: "70vh",
@@ -49,6 +60,8 @@ export default async function UserPage({
             alignItems: "center",
             justifyContent: "center",
             gap: 16,
+            position: "relative",
+            zIndex: 1,
           }}
         >
           <p style={{ color: "var(--text-muted)" }}>{data.error}</p>
@@ -62,7 +75,17 @@ export default async function UserPage({
 
   return (
     <main className="user-page">
-      <div className="user-container">
+      <div className="snake-bg">
+        <Snake
+          snakeColor="#FFFFFF"
+          foodColor="#F9731A"
+          boardColor="rgba(255, 255, 255, 0.04)"
+          cellSize={34}
+          speed={10}
+          fade={32}
+        />
+      </div>
+      <div className="user-container" style={{ position: "relative", zIndex: 1 }}>
         <div className="user-topbar anim-fade-up">
           <Link href="/" className="back-link">
             ← Back

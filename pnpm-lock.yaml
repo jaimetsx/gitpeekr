@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@primer/octicons-react':
-        specifier: ^19.27.0
-        version: 19.27.0(react@19.2.4)
+        specifier: ^19.33.0
+        version: 19.33.0(react@19.2.4)
       next:
         specifier: 16.2.6
         version: 16.2.6(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -462,8 +462,8 @@ packages:
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
-  '@primer/octicons-react@19.27.0':
-    resolution: {integrity: sha512-9bm6DPfMlRMPnAfbqKhRIk9aaYbEw89DHqE9L0k2Xph0AjR+OxCy59of5X0G0epuplMBGFCnkaNhR2HmeJnNJw==}
+  '@primer/octicons-react@19.33.0':
+    resolution: {integrity: sha512-7VL8WuLXXZvUV/DP895ESFXPl/FJq816amCT3KZcmpQgxM1uv6lJGCcsEFpLX3K6SE+3qcmsftPpxn3ctr06+g==}
     engines: {node: '>=8'}
     peerDependencies:
       react: '>=16.3'
@@ -2404,7 +2404,7 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@primer/octicons-react@19.27.0(react@19.2.4)':
+  '@primer/octicons-react@19.33.0(react@19.2.4)':
     dependencies:
       react: 19.2.4
 
